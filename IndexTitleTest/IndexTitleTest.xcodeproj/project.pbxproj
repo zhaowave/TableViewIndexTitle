@@ -14,6 +14,8 @@
 		BA17BFE21EF12687002C7643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA17BFE11EF12687002C7643 /* Assets.xcassets */; };
 		BA17BFE51EF12687002C7643 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA17BFE31EF12687002C7643 /* LaunchScreen.storyboard */; };
 		BAF642871EF2145C00EA0B3A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF642861EF2145C00EA0B3A /* AudioToolbox.framework */; };
+		C987F5D91EFE878F00B780D2 /* ZWTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C987F5D81EFE878F00B780D2 /* ZWTableView.m */; };
+		C987F5DC1EFE965600B780D2 /* IndexTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C987F5DB1EFE965600B780D2 /* IndexTitleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		BA17BFE41EF12687002C7643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA17BFE61EF12687002C7643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAF642861EF2145C00EA0B3A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C987F5D71EFE878F00B780D2 /* ZWTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWTableView.h; sourceTree = "<group>"; };
+		C987F5D81EFE878F00B780D2 /* ZWTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWTableView.m; sourceTree = "<group>"; };
+		C987F5DA1EFE965600B780D2 /* IndexTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexTitleView.h; sourceTree = "<group>"; };
+		C987F5DB1EFE965600B780D2 /* IndexTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexTitleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,10 @@
 				BA17BFD91EF12687002C7643 /* AppDelegate.m */,
 				BA17BFDB1EF12687002C7643 /* ViewController.h */,
 				BA17BFDC1EF12687002C7643 /* ViewController.m */,
+				C987F5D71EFE878F00B780D2 /* ZWTableView.h */,
+				C987F5D81EFE878F00B780D2 /* ZWTableView.m */,
+				C987F5DA1EFE965600B780D2 /* IndexTitleView.h */,
+				C987F5DB1EFE965600B780D2 /* IndexTitleView.m */,
 				BA17BFDE1EF12687002C7643 /* Main.storyboard */,
 				BA17BFE11EF12687002C7643 /* Assets.xcassets */,
 				BA17BFE31EF12687002C7643 /* LaunchScreen.storyboard */,
@@ -163,7 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C987F5D91EFE878F00B780D2 /* ZWTableView.m in Sources */,
 				BA17BFDD1EF12687002C7643 /* ViewController.m in Sources */,
+				C987F5DC1EFE965600B780D2 /* IndexTitleView.m in Sources */,
 				BA17BFDA1EF12687002C7643 /* AppDelegate.m in Sources */,
 				BA17BFD71EF12687002C7643 /* main.m in Sources */,
 			);
