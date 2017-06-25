@@ -50,26 +50,31 @@
 
 - (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     //NSLog(@"touchesBegan");
-    UITouch * touch = touches.anyObject;
-    float y = [touch locationInView:self].y - (zWINDOW_HEIGHT - _labelHeight * _indexTitleArray.count)/2;
-    int sec = y/_labelHeight;
-    if (sec >= _indexTitleArray.count || sec < 0) {
-        return;
-    }
-    if (_firstSection == sec) {
-        return;
-    }
-    _firstSection = sec;
-    NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:sec];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [_delegate scrollToSection:sec];
-        //AudioServicesPlaySystemSound(1519);
-        
-    });
+    [self gestureAction:touches];
+//    return;
+//    UITouch * touch = touches.anyObject;
+//    float y = [touch locationInView:self].y - (zWINDOW_HEIGHT - _labelHeight * _indexTitleArray.count)/2;
+//    int sec = y/_labelHeight;
+//    if (sec >= _indexTitleArray.count || sec < 0) {
+//        return;
+//    }
+//    if (_firstSection == sec) {
+//        return;
+//    }
+//    _firstSection = sec;
+//    //NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:sec];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [_delegate scrollToSection:sec];
+//        //AudioServicesPlaySystemSound(1519);
+//
+//    });
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
-    //NSLog(@"touchesMoved");
+    [self gestureAction:touches];
+}
+
+- (void) gestureAction:(NSSet<UITouch *> *)touches {
     UITouch * touch = touches.anyObject;
     float y = [touch locationInView:self].y - (zWINDOW_HEIGHT - _labelHeight * _indexTitleArray.count)/2;
     
@@ -82,12 +87,8 @@
     }
     _firstSection = sec;
     
-    NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:sec];
+    //NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:sec];
     [_delegate scrollToSection:sec];
-    
-     //AudioServicesPlaySystemSoundWithVibration(4095,nil,dict);
-   // AudioServicesPlaySystemSound(1519);
-    
 }
 
 @end

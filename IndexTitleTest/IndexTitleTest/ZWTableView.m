@@ -43,15 +43,13 @@
     NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:section];
     [self scrollToRowAtIndexPath:indexpath atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+//重写setHidden方法，设置索引视图隐藏属性
+- (void) setHidden:(BOOL)hidden {
+    [super setHidden:hidden];
+    _indexTitleView.hidden = hidden;
 }
-*/
 - (void) dealloc {
-    
+    [_indexTitleView removeFromSuperview];
 }
 
 @end

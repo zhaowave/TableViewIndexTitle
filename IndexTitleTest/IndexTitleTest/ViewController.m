@@ -49,13 +49,13 @@ void AudioServicesPlaySystemSoundWithVibration(int, id, id);
 
 - (void) createTableView {
     UIButton *changeIndexFont = [[UIButton alloc] initWithFrame:CGRectMake(220, 50, 100, 30)];
-   // [changeIndexFont addTarget:self action:@selector(changeIndexFontClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [changeIndexFont addTarget:self action:@selector(hideTableView) forControlEvents:UIControlEventTouchUpInside];
     changeIndexFont.titleLabel.text = @"索引字体++";
     changeIndexFont.backgroundColor = [UIColor greenColor];
     changeIndexFont.tag = 1;
     
     UIButton *decreaseIndexFont = [[UIButton alloc] initWithFrame:CGRectMake(40, 50, 100, 30)];
-   // [decreaseIndexFont addTarget:self action:@selector(changeIndexFontClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [decreaseIndexFont addTarget:self action:@selector(hideTableView) forControlEvents:UIControlEventTouchUpInside];
     decreaseIndexFont.titleLabel.text = @"索引字体--";
     decreaseIndexFont.backgroundColor = [UIColor redColor];
     decreaseIndexFont.tag = 2;
@@ -75,6 +75,15 @@ void AudioServicesPlaySystemSoundWithVibration(int, id, id);
     dispatch_after(5, dispatch_get_main_queue(), ^{
         [_tableView addIndexTitleView];
     });
+}
+
+- (void) hideTableView {
+    if (_tableView.hidden == YES) {
+        _tableView.hidden = NO;
+    } else {
+        _tableView.hidden = YES;
+    }
+   // _tableView.hidden = YES;
 }
 
 //- (void) changeIndexFontClicked:(id) sender{
