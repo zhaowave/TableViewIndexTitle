@@ -26,7 +26,8 @@
     return self;
 }
 
-- (void) addIndexTitleView {
+- (void) addIndexTitleViewWithTitlesArray:(NSMutableArray*)indexTitles {
+    _indexTitleArray = indexTitles;
     //1.没有数据，删除索引视图
     if (_indexTitleArray.count == 0) {
         [_indexTitleView removeFromSuperview];

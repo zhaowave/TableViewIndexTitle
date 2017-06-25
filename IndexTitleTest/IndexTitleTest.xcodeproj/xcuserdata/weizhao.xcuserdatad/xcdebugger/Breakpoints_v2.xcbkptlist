@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IndexTitleTest/ZWTableView.m"
-            timestampString = "520063714.308904"
+            timestampString = "520065510.538969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "-addIndexTitleView"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-addIndexTitleViewWithTitlesArray:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IndexTitleTest/IndexTitleView.m"
-            timestampString = "520063714.309244"
+            timestampString = "520065510.539124"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IndexTitleTest/ZWTableView.m"
-            timestampString = "520063714.309304"
+            timestampString = "520065510.539571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-addIndexTitleView"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-addIndexTitleViewWithTitlesArray:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IndexTitleTest/ZWTableView.m"
-            timestampString = "520063714.309523"
+            timestampString = "520065510.539674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-setHidden:"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IndexTitleTest/ViewController.m"
-            timestampString = "520063714.309727"
+            timestampString = "520065510.539755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"

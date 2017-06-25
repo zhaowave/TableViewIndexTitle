@@ -27,14 +27,14 @@
     self.backgroundColor = [UIColor clearColor];
     self.userInteractionEnabled = YES;
     //
-    self.frame = CGRectMake(zWINDOW_WIDTH - 40, 0, 40, zWINDOW_HEIGHT);
+    self.frame = CGRectMake(zWINDOW_WIDTH - 20-2, 0 + 44, 20, zWINDOW_HEIGHT);
     
     NSString *content = @"A";
     CGSize size =[content sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:_ifontSize]}];
     
     _labelHeight = size.height;//(HEIGHT - 66)/_indexTitleArray.count;
     
-    int gapH = (zWINDOW_HEIGHT - _labelHeight * _indexTitleArray.count)/2;
+    int gapH = (zWINDOW_HEIGHT - 44 - _labelHeight * _indexTitleArray.count)/2;
     
     for (int i  = 0;i<_indexTitleArray.count; i++) {
         UILabel *aaaa = [UILabel new];
@@ -76,7 +76,7 @@
 
 - (void) gestureAction:(NSSet<UITouch *> *)touches {
     UITouch * touch = touches.anyObject;
-    float y = [touch locationInView:self].y - (zWINDOW_HEIGHT - _labelHeight * _indexTitleArray.count)/2;
+    float y = [touch locationInView:self].y - (zWINDOW_HEIGHT - 44 - _labelHeight * _indexTitleArray.count)/2;
     
     int sec = y/_labelHeight;
     if (sec >= _indexTitleArray.count || sec < 0) {

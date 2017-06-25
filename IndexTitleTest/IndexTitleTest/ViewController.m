@@ -69,12 +69,12 @@ void AudioServicesPlaySystemSoundWithVibration(int, id, id);
     _tableView = [[ZWTableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    _tableView.indexTitleArray = self.indexTitleArray;
+    //_tableView.indexTitleArray = self.indexTitleArray;
     
     [self.view addSubview:_tableView];
-    dispatch_after(5, dispatch_get_main_queue(), ^{
-        [_tableView addIndexTitleView];
-    });
+//    dispatch_after(5, dispatch_get_main_queue(), ^{
+//        [_tableView addIndexTitleViewWithTitlesArray:self.indexTitleArray];
+//    });
 }
 
 - (void) hideTableView {
@@ -235,7 +235,11 @@ void AudioServicesPlaySystemSoundWithVibration(int, id, id);
     //cell.detailTextLabel.text = @"detail";
     return cell;
 }
-
+- (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    [_tableView addIndexTitleViewWithTitlesArray:self.indexTitleArray];
+    return nil;
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

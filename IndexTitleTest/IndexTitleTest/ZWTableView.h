@@ -11,5 +11,5 @@
 @interface ZWTableView : UITableView
 @property (nonatomic,strong) NSMutableArray *indexTitleArray;
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style;
-- (void) addIndexTitleView;
+- (void) addIndexTitleViewWithTitlesArray:(NSMutableArray*)indexTitles;
 @end
