@@ -9,6 +9,8 @@
 #import "ZWTableView.h"
 #import "IndexTitleView.h"
 
+#define ZWTABLEVIEW_INDEX_FONT 16 //设置字体大小
+
 @interface ZWTableView ()<IndexTitleViewDelegate>
 
 @property (nonatomic,strong) IndexTitleView *indexTitleView;
@@ -21,7 +23,7 @@
     self = [super initWithFrame:frame style:style];
     if (self) {
         _indexTitleArray = [NSMutableArray new];
-        _ifontSize = 16;
+        _ifontSize = ZWTABLEVIEW_INDEX_FONT;//can be changed by call the setter method
     }
     return self;
 }

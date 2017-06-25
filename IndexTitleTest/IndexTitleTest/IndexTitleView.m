@@ -10,6 +10,8 @@
 
 #define zWINDOW_HEIGHT  [UIScreen mainScreen].bounds.size.height
 #define zWINDOW_WIDTH  [UIScreen mainScreen].bounds.size.width
+
+
 @interface IndexTitleView () {
     NSArray *_indexTitleArray;
     int _ifontSize;
@@ -35,9 +37,10 @@
     _labelHeight = size.height;//(HEIGHT - 66)/_indexTitleArray.count;
     
     int gapH = (zWINDOW_HEIGHT - 44 - _labelHeight * _indexTitleArray.count)/2;
-    
+    NSLog(@"%s,%d",__FILE__,__LINE__);
     for (int i  = 0;i<_indexTitleArray.count; i++) {
         UILabel *aaaa = [UILabel new];
+        aaaa.textAlignment = NSTextAlignmentCenter;
         aaaa.frame = CGRectMake(0, gapH + i * _labelHeight, _labelHeight, _labelHeight);
         aaaa.text = [_indexTitleArray objectAtIndex:i];
         aaaa.font = [UIFont systemFontOfSize:_ifontSize];
@@ -51,18 +54,6 @@
 - (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     //NSLog(@"touchesBegan");
     [self gestureAction:touches];
-//    return;
-//    UITouch * touch = touches.anyObject;
-//    float y = [touch locationInView:self].y - (zWINDOW_HEIGHT - _labelHeight * _indexTitleArray.count)/2;
-//    int sec = y/_labelHeight;
-//    if (sec >= _indexTitleArray.count || sec < 0) {
-//        return;
-//    }
-//    if (_firstSection == sec) {
-//        return;
-//    }
-//    _firstSection = sec;
-//    //NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:sec];
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //        [_delegate scrollToSection:sec];
 //        //AudioServicesPlaySystemSound(1519);
