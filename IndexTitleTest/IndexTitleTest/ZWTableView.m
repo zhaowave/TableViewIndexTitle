@@ -43,7 +43,11 @@
 }
 
 -(void) scrollToSection:(int) section {
-    NSInteger sectionOffset = [self.dataSource tableView:self sectionForSectionIndexTitle:[_indexTitleArray objectAtIndex:section] atIndex:section];
+    NSInteger sectionOffset = section;
+    if ([self.dataSource respondsToSelector:@selector(tableView:sectionForSectionIndexTitle:atIndex:)]) {
+        sectionOffset = [self.dataSource tableView:self sectionForSectionIndexTitle:[_indexTitleArray objectAtIndex:section] atIndex:section];
+    }
+    
     NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:sectionOffset];
     [self scrollToRowAtIndexPath:indexpath atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
