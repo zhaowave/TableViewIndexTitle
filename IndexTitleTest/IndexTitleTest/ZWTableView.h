@@ -10,6 +10,12 @@
 
 @interface ZWTableView : UITableView
 @property (nonatomic,strong) NSMutableArray *indexTitleArray;
+
+
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style;
+
+//implementation dataSource method   ===>      - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+// and call this method in it,
+//finally return nil for dataSource method
 - (void) addIndexTitleViewWithTitlesArray:(NSMutableArray*)indexTitles;
 @end

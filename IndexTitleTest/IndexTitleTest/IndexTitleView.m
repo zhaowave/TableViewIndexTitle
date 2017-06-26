@@ -45,6 +45,8 @@
         aaaa.text = [_indexTitleArray objectAtIndex:i];
         aaaa.font = [UIFont systemFontOfSize:_ifontSize];
         aaaa.textColor = [UIColor grayColor];
+//        NSAttributedString *attr = [[NSAttributedString alloc] initWithString:[_indexTitleArray objectAtIndex:i] attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:_ifontSize],NSForegroundColorAttributeName:[UIColor colorFromHexRGB:@"1C86EE"]}];
+//        aaaa.attributedText = attr;
         [self addSubview:aaaa];
     }
     return self;

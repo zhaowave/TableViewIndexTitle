@@ -43,7 +43,8 @@
 }
 
 -(void) scrollToSection:(int) section {
-    NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:section];
+    NSInteger sectionOffset = [self.dataSource tableView:self sectionForSectionIndexTitle:[_indexTitleArray objectAtIndex:section] atIndex:section];
+    NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:sectionOffset];
     [self scrollToRowAtIndexPath:indexpath atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 //重写setHidden方法，设置索引视图隐藏属性
